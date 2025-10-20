@@ -22,3 +22,4 @@ dependencyResolutionManagement {
 rootProject.name = "AndroidExp"
 include(":HelloWorld")
 include(":layout")
+include(":test3")
