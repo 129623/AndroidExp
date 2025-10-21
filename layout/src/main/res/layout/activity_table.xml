@@ -1,103 +1,118 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:stretchColumns="0">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Open..."
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ctrl+O"
-            android:textSize="16sp"
-            android:gravity="end" />
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save..."
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ctrl+S"
-            android:textSize="16sp"
-            android:gravity="end" />
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Save As..."
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ctrl+Shift+S"
-            android:textSize="16sp"
-            android:gravity="end" />
-    </TableRow>
-
-    <View
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#CCCCCC"
-        android:layout_marginVertical="4dp" />
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X Import..."
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ctrl+I"
-            android:textSize="16sp"
-            android:gravity="end" />
-    </TableRow>
-
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X Export..."
-            android:textSize="16sp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Ctrl+E"
-            android:textSize="16sp"
-            android:gravity="end" />
-    </TableRow>
-
-    <View
+    <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#CCCCCC"
-        android:layout_marginVertical="4dp" />
+        android:layout_height="wrap_content"
+        android:stretchColumns="0"
+        android:padding="16dp">
 
-    <TableRow>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Quit"
-            android:textSize="16sp" />
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Open..."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl+O"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </TableRow>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="" />
-    </TableRow>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save..."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl+S"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </TableRow>
 
-</TableLayout>
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save As..."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl+Shift+S"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="4dp" />
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X Import..."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl+I"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </TableRow>
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="X Export..."
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ctrl+E"
+                android:textSize="16sp"
+                android:gravity="end" />
+        </TableRow>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#CCCCCC"
+            android:layout_marginVertical="4dp" />
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quit"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="" />
+        </TableRow>
+
+    </TableLayout>
+</LinearLayout>

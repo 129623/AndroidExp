@@ -17,6 +17,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".LinerActivity" 
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".TableActivity" 
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Constrain1Activity" 
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Constrain2Activity" 
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>

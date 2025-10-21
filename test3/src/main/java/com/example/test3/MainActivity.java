@@ -4,6 +4,8 @@ import android.Manifest;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
+import android.graphics.ColorSpace;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -56,11 +58,20 @@ public class MainActivity extends AppCompatActivity {
         listView.setAdapter(simpleAdapter);
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
+
+            for (int i = 0; i < parent.getChildCount(); i++) {
+                parent.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
+            }
+            // 设置当前点击item的背景色为红色
+            view.setBackgroundColor(Color.rgb(255, 0, 0));
+
             String name = names[position];
             Toast.makeText(MainActivity.this, name, Toast.LENGTH_SHORT).show();
             pendingNotificationTitle = name;
             handleNotificationPermission(name);
         });
+
+
     }
 
     private void handleNotificationPermission(String title) {
