@@ -3,13 +3,11 @@ package com.example.test3;
 import android.Manifest;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
+import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.graphics.Color;
-import android.graphics.ColorSpace;
 import android.os.Build;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
@@ -33,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     private static final String CHANNEL_ID = "channel_id";
     private static final int NOTIFICATION_PERMISSION_CODE = 100;
     private String pendingNotificationTitle;
+    private Button loginButton;
+    private Button menuButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,18 +59,22 @@ public class MainActivity extends AppCompatActivity {
 
         listView.setOnItemClickListener((parent, view, position, id) -> {
 
-            for (int i = 0; i < parent.getChildCount(); i++) {
-                parent.getChildAt(i).setBackgroundColor(Color.TRANSPARENT);
-            }
-            // 设置当前点击item的背景色为红色
-            view.setBackgroundColor(Color.rgb(255, 0, 0));
-
             String name = names[position];
             Toast.makeText(MainActivity.this, name, Toast.LENGTH_SHORT).show();
             pendingNotificationTitle = name;
             handleNotificationPermission(name);
         });
 
+        loginButton = findViewById(R.id.login);
+        loginButton.setOnClickListener((v)-> {
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        });
+        menuButton = findViewById(R.id.menu);
+        menuButton.setOnClickListener((v) -> {
+            Intent intent = new Intent(MainActivity.this, ActionModeActivity.class);
+            startActivity(intent);
+        });
 
     }
 

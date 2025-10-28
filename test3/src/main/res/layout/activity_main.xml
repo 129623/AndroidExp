@@ -7,6 +7,25 @@
     <ListView
         android:id="@+id/listView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:listSelector="#600" />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="login" />
+
+    <Button
+        android:id="@+id/menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="menu" />
+
+    <Button
+        android:id="@+id/action_mode_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Action Mode" />
 
 </LinearLayout>
